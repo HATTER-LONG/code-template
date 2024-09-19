@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pyside6-fluent-widgets-template"
+version = "0.1.0"
+description = "It's a template to dev pyside6 app with fluent style widgets"
+authors = ["Layton <caolei6767@gmail.com>"]
+license = "GPL-3.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+pyside6 = "^6.7.2"
+pyside6-fluent-widgets = {extras = ["full"], version = "^1.6.4"}
+setuptools = "^75.1.0"
+pyinstaller = "^6.10.0"
+pebble = "^5.0.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# [[tool.poetry.source]]
+# name = "tsinghua"
+# url = "https://pypi.tuna.tsinghua.edu.cn/simple/"
+# priority = "primary"
