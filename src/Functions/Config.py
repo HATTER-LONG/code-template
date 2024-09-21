@@ -64,28 +64,6 @@ def isWin11():
 class Config(QConfig):
     """Config of application"""
 
-    # main function
-    provider = OptionsConfigItem(
-        "LLM", "Provider", "openai", OptionsValidator(["openai", "tongyi"])
-    )
-    model_name = ConfigItem("LLM", "ModelName", "", ConfigValidator())
-    embed_model_name = ConfigItem("LLM", "EmbedModelName", "", ConfigValidator())
-    user_key = ConfigItem("LLM", "UserKey", "", ConfigValidator())
-    provider_url = ConfigItem("LLM", "URL", "Default", ProviderUrlValidator())
-    database_folder = ConfigItem("LLM", "Database", "app/database", FolderValidator())
-    target_language = OptionsConfigItem(
-        "LLM",
-        "TargetLanguage",
-        "english",
-        OptionsValidator(["chinese", "english", "japanese"]),
-    )
-    mother_tongue = OptionsConfigItem(
-        "LLM",
-        "MotherTongue",
-        "chinese",
-        OptionsValidator(["chinese", "english", "japanese"]),
-    )
-
     # main window
     mica_enabled = ConfigItem("MainWindow", "MicaEnabled", isWin11(), BoolValidator())
     dpiScale = OptionsConfigItem(
